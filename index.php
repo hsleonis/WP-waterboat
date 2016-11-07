@@ -24,20 +24,21 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="<?php echo bloginfo('url'); ?>">
                             <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php echo bloginfo('title'); ?>" />
                         </a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="nsl-menubar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">PROFIILE</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                            <li><a href="#">OURSERVICES</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
+                    <?php wp_nav_menu( array(
+                        'theme_location'    => 'main-menu',
+                        'container'         => 'div',
+                        'container_class'   => 'collapse navbar-collapse',
+                        'container_id'      => 'nsl-menubar-collapse',
+                        'menu_class'        => 'nav navbar-nav navbar-right',
+                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                        'walker'            => new wp_bootstrap_navwalker()
+                    )); ?><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
 
@@ -116,161 +117,32 @@
                     <!--service section right side column-->
                     <div class="col-sm-9 col-xs-12 col-mb-12">
                         <div class="row">
-
+                            <?php
+                                $posts = new WP_Query(array(
+                                    'post_type' => 'Service'
+                                ));
+                                if($posts->have_posts()):
+                                while ($posts->have_posts()): $posts->the_post();
+                            ?>
                             <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
                                 <div class="service-block">
                                     <div class="inner-block text-center">
                                         <div class="s-block-title">
-                                            <span>Line agencies</span>
+                                            <span><?php the_title(); ?></span>
                                         </div>
                                         <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
+                                            <span><?php the_excerpt(); ?></span>
                                         </div>
                                     </div>
                                     <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
+                                        <a href="<?php the_permalink(); ?>" class="btn btn-default btn-general"> READ MORE </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Forwarding services</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Temperature controlled shipments</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Import Airfreight</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Spare parts Logistics</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Africa</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Waiver services </span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Shipment of personal effects</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-xs-6 col-mb-12">
-                                <div class="service-block">
-                                    <div class="inner-block text-center">
-                                        <div class="s-block-title">
-                                            <span>Documentation handling</span>
-                                        </div>
-                                        <div class="s-block-info">
-                                            <span>Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                                neque quam  pharetra dolor, nec lacinia urna quam.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="readMore-button text-center">
-                                        <button type="button" class="btn btn-default btn-general"> READ MORE </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                                endwhile;
+                                endif;
+                            ?>
                         </div>
                     </div><!--service section right side column-->
                 </div>
@@ -283,22 +155,20 @@
                 <div class="row">
                     <div class="col-xs-6 col-mb-12 text-center right-border">
                         <div class="different-services">
-                            <p class="different-services-title">Agencies</p>
+                            <p class="different-services-title"><?php echo TmxLibraryIncluder::getAdmin()->getOption('page_left_title'); ?></p>
                             <p class="different-services-info">
-                                Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                neque quam  pharetra dolor, nec lacinia urna quam.
+                                <?php echo TmxLibraryIncluder::getAdmin()->getOption('page_left_desc'); ?>
                             </p>
-                            <button type="button" class="btn btn-default btn-general">Find out more</button>
+                            <a href="<?php echo TmxLibraryIncluder::getAdmin()->getOption('page_left_link'); ?>" class="btn btn-default btn-general">Find out more</a>
                         </div>
                     </div>
                     <div class="col-xs-6 col-mb-12 text-center">
                         <div class="different-services">
-                            <p class="different-services-title">Worldwide service</p>
+                            <p class="different-services-title"><?php echo TmxLibraryIncluder::getAdmin()->getOption('page_right_title'); ?></p>
                             <p class="different-services-info">
-                                Praesent eu rhoncus nibh. Quisque tincidunt, nisi in venenatis commodo,
-                                neque quam  pharetra dolor, nec lacinia urna quam.
+                                <?php echo TmxLibraryIncluder::getAdmin()->getOption('page_right_desc'); ?>
                             </p>
-                            <button type="button" class="btn btn-default btn-general">Find out more</button>
+                            <a href="<?php echo TmxLibraryIncluder::getAdmin()->getOption('page_right_link'); ?>" class="btn btn-default btn-general">Find out more</a>
                         </div>
                     </div>
 

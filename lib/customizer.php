@@ -146,6 +146,47 @@ class TmxCustomizerTitan
             'desc' => 'Section subtitle'
         ));
 
+        $page = $titan->createThemeCustomizerSection(array(
+            'name' => 'Page section',
+            'panel' => 'Home page'
+        ));
+        $page->createOption( array(
+            'name' => 'Left page title',
+            'id' => 'page_left_title',
+            'type' => 'text',
+            'desc' => 'Page section left'
+        ) );
+        $page->createOption( array(
+            'name' => 'Left page description',
+            'id' => 'page_left_desc',
+            'type' => 'text',
+            'desc' => ''
+        ) );
+        $page->createOption( array(
+            'name' => 'Link',
+            'id' => 'page_left_link',
+            'type' => 'text',
+            'desc' => 'Left action button link'
+        ) );
+        $page->createOption( array(
+            'name' => 'Right page title',
+            'id' => 'page_right_title',
+            'type' => 'text',
+            'desc' => 'Page section right'
+        ) );
+        $page->createOption( array(
+            'name' => 'Right page description',
+            'id' => 'page_right_desc',
+            'type' => 'text',
+            'desc' => ''
+        ) );
+        $page->createOption( array(
+            'name' => 'Link',
+            'id' => 'page_right_link',
+            'type' => 'text',
+            'desc' => 'Right action button link'
+        ) );
+
         $copyright = $titan->createThemeCustomizerSection(array(
             'name' => 'Copyright',
         ));

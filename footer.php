@@ -18,25 +18,13 @@
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6 col-mb-12">
-                <div class="info-block footer-info-block">
-                    <div class="title">Call Center</div>
-                    <div>Give us a call</div>
-                    <div>+45 888 070 10</div>
-                </div>
+                <?php get_sidebar('sidebar-1'); ?>
             </div>
             <div class="col-sm-3 col-xs-6 col-mb-12">
-                <div class="info-block footer-info-block">
-                    <div class="title">Woking Hours</div>
-                    <div>Mon-Thu   0830 - 1630 hrs</div>
-                    <div> Fri 0830 - 1600 hrs </div>
-                </div>
+                <?php dynamic_sidebar('sidebar-2'); ?>
             </div>
             <div class="col-sm-3 col-xs-6 col-mb-12">
-                <div class="info-block footer-info-block">
-                    <div class="title">Our location</div>
-                    <div>A.P. Moellers Alle 9C</div>
-                    <div>DK-2791 Dragoer, Denmark</div>
-                </div>
+                <?php dynamic_sidebar('sidebar-3'); ?>
             </div>
         </div>
     </div>

@@ -58,6 +58,8 @@ class TmxLibraryIncluder{
         require_once ( get_template_directory().'/lib/customizer.php');
         require_once ( get_template_directory().'/lib/custom-post.php');
         require_once ( get_template_directory().'/lib/theme-support.php');
+        require_once ( get_template_directory().'/lib/wp_bootstrap_navwalker.php');
+        require_once ( get_template_directory().'/lib/sidebar.php');
     }
 
     /**
@@ -70,6 +72,7 @@ class TmxLibraryIncluder{
         new TmxEnqueue();
         new TmxCustomizerTitan(self::$admin);
         new TmxThemeSupport();
+        new wp_bootstrap_navwalker();
         new TmxMenu(array(
             'main-menu' => __( 'Main menu', 'themeaxe' ),
         ));
@@ -78,6 +81,15 @@ class TmxLibraryIncluder{
             'taxonomies' => array( ),
             'menu_icon' => 'dashicons-editor-table'
         ));
+        new TmxSidebar( 3, array(
+                'class'         => 'col-sm-3 col-xs-6 col-mb-12',
+                'before_title'  => '<div class="title">',
+                'after_title'   => '</div>',
+                'before_widget' => '<div class="info-block footer-info-block">',
+                'after_widget'  => '</div>',
+                'name'          => __( 'Footer %d', 'themeaxe' )
+            )
+        );
     }
 
     /**
