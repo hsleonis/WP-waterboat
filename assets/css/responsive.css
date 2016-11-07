@@ -1,0 +1,80 @@
+/* Start of Responsive Media Query*/
+/*===============================================================
+ ================(max-width:500px)==========================*/
+/* Mobile phones and down */
+@media screen and (max-width:500px){
+	.col-mb-12{
+		width: 100%;
+	}
+	.col-mb-6{
+		width: 50%;
+	}
+	.info-block {
+		border-right: 0;
+		border-bottom: 1px solid #b7b7b780;
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+	.banner-right-block {
+		float: none;
+	}
+	.srv-text, .srv-text1{
+		text-align: center;
+	}
+	.service-block {
+		max-width: 300px;
+		margin: 0 auto 15px auto;
+	}
+	.right-border {
+		border-right: 0;
+	}
+	.footer-info-block{
+		border-bottom: 0;
+	}
+
+}/* Mobile phones and down */
+/*===============================================================
+====================(max-width:768px)===========================*/
+/* Landscape phones and down */
+@media screen and (max-width:768px){
+	.info-block {
+		padding-left: 0;
+	}
+	.banner-right-block {
+		width: 100%;
+	}
+	.bg-three {
+		padding-top: 55px;
+		padding-bottom: 45px;
+	}
+	.different-services-title {
+		min-height: 90px;
+	}
+	.footer-info-block, .footer-logo {
+		margin-bottom: 30px;
+	}
+}/* Landscape phones and down */
+/*==============================================================*/
+/*==============================================================*/
+/* Landscape phone to portrait tablet*/
+@media (min-width:768px) and (max-width:992px){
+	.banner-right-block {
+		width: 100%;
+	}
+}/* Landscape phone to portrait tablet */
+/*==============================================================*/
+/*==============================================================*/
+/* Portrait tablet to landscape and desktop */
+@media(min-width:992px) and (max-width:1200px){
+
+}/* Portrait tablet to landscape and desktop */
+/*==============================================================*/
+/*==============================================================*/
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}/* Large desktop */
+/*==============================================================*/
+
+

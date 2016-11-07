@@ -1,0 +1,256 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 3, 2016.
+    Author     : Rakib Hasan (rakib2k8@gmail.com)
+*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.top-bg, .bg-one, .bg-two, .bg-three{
+    background-size: cover;
+    background-position: center;
+}
+.top-bg{
+    /*background-image: url('../images/banner.png');*/
+    min-height: 500px;
+}
+.bg-one{
+    /*background-image: url('../images/banner2.png');*/
+    padding: 45px 0;
+}
+.bg-two{
+    /*background-image: url('../images/banner3.png');*/
+}
+.bg-three{
+    /*background-image: url('../images/banner4.png');*/
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+/*site menu*/
+.nsl-menubar {
+    background-color: transparent !important;
+    border: 0 !important;
+}
+.nsl-menubar-toggle {
+    border: 1px solid #476070 !important;
+}
+.nsl-menubar-toggle:hover, .nsl-menubar-toggle:active, .nsl-menubar-toggle:focus {
+    background-color: #062B4A !important;
+}
+.nsl-menubar .container::before {
+    border-top: 1px solid #465f6c;
+    margin-top: 30px;
+    width: 100%;
+}
+.nsl-menubar .nav li a,
+.banner-left-block, .banner-right-block,
+.info-block, .different-services{
+    color: #fff;
+}
+.nsl-menubar .nav li a {
+    font-size: 12px;
+    font-weight: 700;
+}
+.nsl-menubar .nav li a:hover, .nsl-menubar .nav li a:active, .nsl-menubar .nav li a:focus {
+    color: #c5c1c1;
+}
+.nsl-menubar .navbar-collapse{
+    border-color: #465f6c;
+    margin-top: 15px;
+}
+
+/*body top item*/
+.banner-left-block, .banner-right-block {
+    margin-top: 30px;
+    max-width: 350px;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.welcome, .srv-text {
+    font-size: 20px;
+}
+.welcome, .info-block div, .s-block-info {
+    font-weight: 600;
+}
+.separator {
+    border: 1px solid #2a4ea0;
+    width: 80px;
+    height: 2px !important;
+    margin: 10px 0;
+}
+.subtitle, .agencies-info, .different-services-info {
+    font-weight: 500;
+}
+.subtitle, .info-block .title {
+    font-size: 14px;
+}
+.btn-general {
+    border-radius: 0;
+    color: #fff;
+    background-color: #0b61aa;
+    border: 0;
+    padding: 5px 15px;
+}
+.banner-left-block .btn-general{
+    margin-top: 15px;
+}
+.btn-general:hover {
+    background-color: #0b61aab3;
+    color:  #c5c1c1;
+}
+.track-trace, .srv-text1,
+.different-services-title{
+    font-weight: 800;
+}
+.info-block .title, .s-block-title{
+    font-weight: 700;
+}
+.find, .info-block div {
+    font-size: 12px;
+}
+ .control-label {
+    font-size: 13px;
+    font-weight: 500;
+     text-align: left !important;
+}
+.input-field {
+    background-color: rgba(125, 125, 125, 0.23);
+    border: 0;
+    color: #fff;
+}
+.banner-right-block .btn-general {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.form-horizontal {
+    margin-top: 30px;
+}
+.banner-right-block {
+    background-color: rgba(0,0,0,0.62);;
+    padding: 30px 15px;
+    float: right;
+    width: 70%;
+}
+.banner-right-block input::-webkit-input-placeholder {
+    color:    #78797b;
+    font-size: 11px;
+    font-weight: 300;
+}
+.banner-right-block input:-moz-placeholder {
+    color:    #78797b;
+    font-size: 11px;
+    font-weight: 300;
+}
+.banner-right-block input::-moz-placeholder {
+    color:    #78797b;
+    font-size: 11px;
+    font-weight: 300;
+}
+.banner-right-block input:-ms-input-placeholder {
+    color:    #78797b;
+    font-size: 11px;
+    font-weight: 300;
+}
+.info-block .title{
+    margin-bottom: 15px;
+}
+.info-block {
+    border-right: 1px solid #b7b7b780;
+    position: relative;
+    padding-left: 25%;
+}
+.bg-one .col-xs-4:last-child .info-block {
+    border: 0;
+}
+.service-section{
+    margin-bottom: 30px;
+}
+.srv-text{
+    color: #010506;
+}
+.srv-text1{
+    color: #010b11;
+}
+.srv-text1, .different-services-title{
+    font-size: 30px;
+}
+.srv-text, .srv-text1{
+    text-align: right;
+}
+.s-block-title{
+    font-size: 17px;
+    min-height: 75px;
+    color: #03111e;
+}
+.s-block-info{
+    font-size: 15px;
+    color: #303030;
+}
+.bg-two{
+    padding: 60px 0;
+}
+.service-block {
+    background-color: #f6f6f6;
+    margin-bottom: 15px;
+}
+.inner-block {
+    padding: 30px 30px 50px 30px;
+}
+.readMore-button {
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+.readMore-button button {
+    position: relative;
+    top: -15px;
+    height: 35px;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 30px;
+}
+.different-services {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    max-width: 280px;
+    text-align: left;
+    margin: auto;
+}
+.right-border {
+    border-right: 1px solid #424443;
+}
+.different-services-info{
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+.footer-area {
+    background-color: #020a17;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+.footer-logo img {
+    max-width: 85px;
+}
+.footer-info-block {
+    border-right: 0;
+}
+.footer-info-block .title{
+    position: relative;
+    margin-bottom: 35px;
+}
+.footer-info-block .title::after {
+    content: "";
+    border-bottom: 2px solid #1c356f;
+    width: 80px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
