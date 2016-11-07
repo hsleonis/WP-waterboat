@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-sm-3 col-xs-6 col-mb-12">
                 <div class="footer-logo">
-                    <img src="assets/images/logo.png" alt="footer-logo"/>
+                    <a href="<?php echo bloginfo('url'); ?>"><img class="img-responsive" src="<?php header_image(); ?>" alt="<?php echo bloginfo('title'); ?>" /></a>
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6 col-mb-12">

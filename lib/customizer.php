@@ -36,100 +36,115 @@ class TmxCustomizerTitan
         $titan = TitanFramework::getInstance($this->instance_name);
 
         $home = $titan->createThemeCustomizerSection(array(
-            'name' => 'Home Section'
+            'name' => 'Home page settings',
+            'panel' => 'Home page'
         ));
-        $home->createOption(array(
-            'name' => 'Image',
-            'id' => 'home-img',
+        $img = $titan->createThemeCustomizerSection(array(
+            'name' => 'Images',
+            'panel' => 'Home page'
+        ));
+        $img->createOption(array(
+            'name' => 'Home banner',
+            'id' => 'banner_img',
             'type' => 'upload',
-            'desc' => 'Main image display'
+            'desc' => 'Home page banner image'
         ));
-        $home->createOption(array(
-            'name' => 'Text',
-            'id' => 'home-info',
-            'type' => 'textarea',
-            'desc' => 'Detailed text about the brand.'
+        $img->createOption(array(
+            'name' => 'Contact background',
+            'id' => 'contact_img',
+            'type' => 'upload',
+            'desc' => 'Contact section background image'
         ));
-        $home->createOption(array(
-            'name' => 'Spacer',
-            'id' => 'home-spacer',
-            'type' => 'checkbox',
-            'desc' => 'Show spacer line above text',
-            'default' => true
+        $img->createOption(array(
+            'name' => 'Service background',
+            'id' => 'service_img',
+            'type' => 'upload',
+            'desc' => 'Service background image'
+        ));
+        $img->createOption(array(
+            'name' => 'Page background',
+            'id' => 'page_img',
+            'type' => 'upload',
+            'desc' => 'Page section background image'
         ));
 
-        $about = $titan->createThemeCustomizerSection(array(
-            'name' => 'About Section'
+        $banner = $titan->createThemeCustomizerSection(array(
+            'name' => 'Banner section',
+            'panel' => 'Home page'
         ));
-        $about->createOption(array(
+        $banner->createOption(array(
+            'name' => 'Text before title',
+            'id' => 'before_title',
+            'type' => 'text',
+            'desc' => ''
+        ));
+        $banner->createOption(array(
             'name' => 'Title',
-            'id' => 'about-title',
+            'id' => 'title',
             'type' => 'text',
-            'desc' => 'About section title'
+            'desc' => ''
         ));
-        $about->createOption(array(
-            'name' => 'Image',
-            'id' => 'about-img',
-            'type' => 'upload',
-            'desc' => 'About section image'
+        $banner->createOption(array(
+            'name' => 'Subtitle',
+            'id' => 'subtitle',
+            'type' => 'text',
+            'desc' => ''
         ));
-        $about->createOption(array(
-            'name' => 'Text',
-            'id' => 'about-info',
-            'type' => 'textarea',
-            'desc' => 'Detailed text about services.'
-        ));
-        $about->createOption(array(
-            'name' => 'Spacer',
-            'id' => 'about-spacer',
+        $banner->createOption(array(
+            'name' => 'Show link',
+            'id' => 'show_link',
             'type' => 'checkbox',
-            'desc' => 'Show spacer line above text',
+            'desc' => 'Show action button',
             'default' => true
         ));
-
-        $footer = $titan->createThemeCustomizerSection(array(
-            'name' => 'Location Info',
-            'panel' => 'Locations'
-        ));
-
-        $footer->createOption(array(
-            'name' => 'Location Title',
-            'id' => 'location-title',
+        $banner->createOption(array(
+            'name' => 'Button text',
+            'id' => 'link_text',
             'type' => 'text',
-            'desc' => 'Location section title'
+            'desc' => ''
         ));
-        $footer->createOption(array(
-            'name' => 'Location Info',
-            'id' => 'location-info',
-            'type' => 'textarea',
-            'desc' => 'Detailed text about locations.'
+        $banner->createOption(array(
+            'name' => 'Link',
+            'id' => 'link',
+            'type' => 'text',
+            'desc' => 'Action button link'
         ));
 
+        $contact = $titan->createThemeCustomizerSection(array(
+            'name' => 'Contact section',
+            'panel' => 'Home page'
+        ));
         for($i=1;$i<=3;$i++) {
-
-            $loc = $titan->createThemeCustomizerSection(array(
-                'name' => 'Location '.$i,
-                'panel' => 'Locations'
-            ));
-            $loc->createOption(array(
-                'name' => 'Location Name',
-                'id' => 'location-name'.$i,
+            $contact->createOption(array(
+                'name' => 'Contact Title '.$i,
+                'id' => 'contact_title_'.$i,
                 'type' => 'text',
-                'desc' => 'Location section name'
+                'desc' => 'Contact item title'
             ));
-            $loc->createOption(array(
-                'name' => 'URL',
-                'id' => 'location-url'.$i,
-                'type' => 'text',
-                'desc' => 'Location URL'
-            ));
-            $loc->createOption(array(
-                'name' => 'Upload',
-                'id' => 'location-img'.$i,
-                'type' => 'upload',
-                'desc' => 'Location Image',
+            $contact->createOption(array(
+                'name' => 'Contact Info '.$i,
+                'id' => 'contact_info_'.$i,
+                'type' => 'textarea',
+                'desc' => 'Contact description'
             ));
         }
+
+        $service = $titan->createThemeCustomizerSection(array(
+            'name' => 'Service section',
+            'panel' => 'Home page'
+        ));
+        $service->createOption(array(
+            'name' => 'Title',
+            'id' => 'service_title',
+            'type' => 'text',
+            'desc' => 'Section title'
+        ));
+        $service->createOption(array(
+            'name' => 'Subtitle',
+            'id' => 'service_subtitle',
+            'type' => 'text',
+            'desc' => 'Section subtitle'
+        ));
 
         $copyright = $titan->createThemeCustomizerSection(array(
             'name' => 'Copyright',
