@@ -56,6 +56,7 @@ class TmxLibraryIncluder{
         require_once ( get_template_directory().'/lib/menu.php');
         require_once ( get_template_directory().'/lib/admin-embedder.php');
         require_once ( get_template_directory().'/lib/customizer.php');
+        require_once ( get_template_directory().'/lib/custom-post.php');
         require_once ( get_template_directory().'/lib/theme-support.php');
     }
 
@@ -72,6 +73,11 @@ class TmxLibraryIncluder{
             'main-menu' => __( 'Main menu', 'themeaxe' ),
         ));
         new TmxThemeSupport();
+        new TmxCustomPost('Service', array(
+            'supports' => array('title', 'editor'),
+            'taxonomies' => array( ),
+            'menu_icon' => 'dashicons-editor-table'
+        ));
     }
 
     /**
