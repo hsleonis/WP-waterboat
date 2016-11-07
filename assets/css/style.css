@@ -209,13 +209,13 @@ body{
     background-color: #fff;
     padding-bottom: 15px;
 }
-.readMore-button button {
+.readMore-button a {
     position: relative;
     top: -15px;
     height: 35px;
     font-weight: 700;
     font-size: 13px;
-    padding: 5px 30px;
+    padding: 9px 30px;
 }
 .different-services {
     padding-top: 45px;
