@@ -69,12 +69,12 @@ class TmxLibraryIncluder{
     private function init(){
         new TmxEnqueue();
         new TmxCustomizerTitan(self::$admin);
+        new TmxThemeSupport();
         new TmxMenu(array(
             'main-menu' => __( 'Main menu', 'themeaxe' ),
         ));
-        new TmxThemeSupport();
         new TmxCustomPost('Service', array(
-            'supports' => array('title', 'editor'),
+            'supports' => array('title', 'editor', 'excerpt'),
             'taxonomies' => array( ),
             'menu_icon' => 'dashicons-editor-table'
         ));
