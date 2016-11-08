@@ -32,7 +32,7 @@ class TmxThemeSupport{
         add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
 
         // Add theme support for Featured Images
-        add_theme_support( 'post-thumbnails', array( 'post' ) );
+        add_theme_support( 'post-thumbnails', array( 'post', 'service' ) );
 
         // Set custom thumbnail dimensions
         //set_post_thumbnail_size( 300, 545, true );

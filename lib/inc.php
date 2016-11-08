@@ -77,7 +77,6 @@ class TmxLibraryIncluder{
             'main-menu' => __( 'Main menu', 'themeaxe' ),
         ));
         new TmxCustomPost('Service', array(
-            'supports' => array('title', 'editor', 'excerpt'),
             'taxonomies' => array( ),
             'menu_icon' => 'dashicons-editor-table'
         ));
