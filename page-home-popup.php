@@ -67,9 +67,9 @@
                         <p class="find">Find your shipping</p>
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="control-label col-xs-4"> Fullname:</label>
+                                <label class="control-label col-xs-4"> Email:</label>
                                 <div class="col-xs-8">
-                                    <input type="text" class="form-control input-field" id="fullname" placeholder="Enter your fullname.">
+                                    <input type="text" class="form-control input-field" id="email" placeholder="Enter your email">
                                 </div>
                             </div>
                             <div class="form-group">
