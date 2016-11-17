@@ -435,26 +435,6 @@ body {
     border: 0;
     margin: 0;
 }
-#tracktrace-modal .modal-content {
-	background-color: rgba(0, 0, 0, 0.62);
-    padding: 30px 15px;
-	color: #fff;
-}
-#tracktrace-modal .modal-dialog {
-	width: 70%;
-	min-width: 600px;
-	max-width: 80%;
-}
-#tracktrace-modal .modal-title {
-	font-weight: 800;
-}
-#tracktrace-modal .modal-footer button {
-	border-radius: 4px;
-}
-
-#tracktrace-modal .table-striped > tbody > tr:nth-of-type(2n+1) {
-	background-color: #0b61aa;
-}
 
 /*********************************************
 * [8] MEDIA QUERY
@@ -463,19 +443,5 @@ body {
     #sidebar ul,
     .service-list {
         padding: 0;
-    }
-    .service-list li{
-        text-align: center;
-        margin: 10px 0;
-        padding-bottom: 10px;
-    }
-    .bg-service {
-        padding: 40px 15px;
-    }
-    .different-services-title {
-        min-height: 50px !important;
-    }
-    .footer-area .col-mb-12 {
-        padding: 0 50px;
     }
 }

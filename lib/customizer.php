@@ -169,6 +169,12 @@ class TmxCustomizerTitan
             'desc' => 'Left action button link'
         ) );
         $page->createOption( array(
+            'name' => 'Details',
+            'id' => 'page_left_detail',
+            'type' => 'textarea',
+            'desc' => 'Details in Popup'
+        ) );
+        $page->createOption( array(
             'name' => 'Right page title',
             'id' => 'page_right_title',
             'type' => 'text',
@@ -186,6 +192,29 @@ class TmxCustomizerTitan
             'type' => 'text',
             'desc' => 'Right action button link'
         ) );
+        $page->createOption( array(
+            'name' => 'Details',
+            'id' => 'page_right_detail',
+            'type' => 'textarea',
+            'desc' => 'Details in Popup'
+        ) );
+
+        $service_page = $titan->createThemeCustomizerSection(array(
+            'name' => 'Service Page',
+        ) );
+        $service_page->createOption(array(
+            'name' => 'Page background',
+            'id' => 'service_page_img',
+            'type' => 'upload',
+            'desc' => 'Service page background image'
+        ));
+        $service_page->createOption( array(
+            'name' => 'Header color',
+            'id' => 'service_header_bgcolor',
+            'type' => 'color',
+            'desc' => 'Pick a color',
+            'default' => '#143D70',
+        ));
 
         $copyright = $titan->createThemeCustomizerSection(array(
             'name' => 'Copyright',
